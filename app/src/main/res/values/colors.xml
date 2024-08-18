@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#fbca2c</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#CAC4C4</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="yb_color">#fbca2c</color>
+
+    <color name="yb_background_color">#66FBCA2C</color>
+    <color name="yb_background_button_color">#F1DB93</color>
+
+    <color name="yb_backgorund_solid_color">#9C9090</color>
+</resources>

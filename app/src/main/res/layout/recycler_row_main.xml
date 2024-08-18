@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recyclerRowMainCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="4dp"
+    android:layout_marginVertical="5dp"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="365dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/recyclerRowImage"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_weight="6"
+            android:layout_margin="4dp"
+            android:src="@drawable/yorumdanbul">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="20dp">
+
+                    <TextView
+                        android:id="@+id/recyclerRowCategoryText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="#2E2D2D"
+                        android:layout_marginVertical="1dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="Kategori">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/recyclerViewUrunText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="1dp"
+                        android:textColor="#2E2D2D"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="Ürün">
+                    </TextView>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginStart="5dp">
+
+                    <TextView
+                        android:id="@+id/recyclerViewCategoryTextInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="1dp"
+                        android:textColor="#776D6D"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="Katagori İçeriği">
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/recyclerViewUrunTextInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginVertical="1dp"
+                        android:textColor="#776D6D"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:text="Ürün İçerigi"
+                        android:maxLines="3">
+
+                    </TextView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.3dp"
+                android:background="#A59898"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="1dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginVertical="1dp">
+
+                <TextView
+                    android:id="@+id/recyclerRowYorumSayısıText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:layout_marginHorizontal="5dp"
+                    android:textSize="11sp"
+                    android:text="Yorum sayısı">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/recyclerRowUrunPuanıText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="11sp"
+                    android:text="Ürün Puanı">
+                </TextView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

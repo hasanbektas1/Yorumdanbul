@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="5dp">
+
+    <TextView
+        android:id="@+id/recyclerRowCommentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment"
+        android:textSize="18sp"
+        android:textColor="@color/black">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/recyclerRowCommentDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Comment Date"
+        android:layout_gravity="end"
+        android:textSize="17sp"
+        android:textColor="@color/yb_color">
+
+    </TextView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.3dp"
+        android:background="#A59898"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="15dp"/>
+</LinearLayout>

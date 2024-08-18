@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.MainFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:srcCompat="@drawable/yorumdanbul">
+    </ImageView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/categoryMenu"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:hint="Kategori seç"
+        android:layout_marginHorizontal="8dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:editable="false"
+            android:singleLine="true"
+            android:textColor="@color/black">
+        </AutoCompleteTextView>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_collapseMode="pin"
+                app:layout_scrollFlags="scroll|enterAlways"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/searchTextView"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:hint="Aranacak kelimeyi yaz.">
+
+                    <EditText
+                        android:id="@+id/searchText"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/black"
+                        android:drawableStart="@drawable/search_icon">
+
+                    </EditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/searchButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textAllCaps="false"
+                    android:layout_marginHorizontal="8dp"
+                    android:backgroundTint="@color/yb_color"
+                    android:text="Ara"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
+
+                </Button>
+
+            </LinearLayout>
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/searchTextResult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginHorizontal="8dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="15sp">
+                </TextView>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <Button
+            android:id="@+id/ybErrorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tekrar Dene"
+            android:backgroundTint="@color/yb_backgorund_solid_color"
+            android:layout_gravity="center"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textStyle="bold"
+            android:textSize="25sp">
+
+        </Button>
+
+        <ProgressBar
+            android:id="@+id/ybProgressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:visibility="gone"
+            app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="50dp"
+            android:indeterminateTint="@color/yb_color" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

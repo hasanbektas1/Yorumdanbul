@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/yorumdanbul_navigation"
+    app:startDestination="@id/sscreenFragment">
+
+    <fragment
+        android:id="@+id/sscreenFragment"
+        android:name="com.hasanbektas.yorumdanbull.view.SscreenFragment"
+        android:label="fragment_sscreen"
+        tools:layout="@layout/fragment_sscreen" >
+        <action
+            android:id="@+id/action_sscreenFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.hasanbektas.yorumdanbull.view.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sscreenFragment"
+            app:destination="@id/sscreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.hasanbektas.yorumdanbull.view.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" >
+        <action
+            android:id="@+id/action_detailFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <argument
+            android:name="actionList"
+            app:argType="com.hasanbektas.yorumdanbull.model.YorumdanbulModel" />
+        <argument
+            android:name="actionSearchText"
+            app:argType="string" />
+    </fragment>
+</navigation>
